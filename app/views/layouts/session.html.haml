@@ -1,0 +1,28 @@
+!!!
+%html.app
+  %head
+    %title= content_for?(:title) ? yield(:title) : "Untitled"
+    %meta{:content => "sports venues, reservation, match, soccer, futbol, squash, karts, paintball, booking, dashboard", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    = stylesheet_link_tag    'application', media: 'all'
+    = csrf_meta_tag
+    = yield(:head)
+  %body.bg-primary.dk.intro-login
+    %header#header.navbar.navbar-fixed-top.bg-primary.dk{"data-offset-top" => "1", "data-spy" => "affix"}
+      .container
+        .navbar-header
+          .navbar-brand.m-r-lg
+            %span.text-lt BookMyMatch.co
+    %section#content.m-t-lg.wrapper-md.animated.fadeInUp
+      .container.aside-xl
+        %header.wrapper.text-center
+          %strong
+            This is a demo platform.
+            %br No real booking available.
+        = yield
+    %footer#footer
+      .text-center.padder
+        %p
+          %small
+            BookMyMatch is a brand of AC Labs LLC.
+            %br &copy; 2014

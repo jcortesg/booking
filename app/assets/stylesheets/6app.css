@@ -2636,13 +2636,6 @@ fieldset[disabled] .btn-dark.active {
   background-color: #e33244;
   color: #fce5e8;
 }
-.bg-orange {
-  background-color: #ed5b25;
-  color: #fff;
-}
-.bg-orange a span, .bg-orange a i {
-  color: #fff !important;
-}
 .bg-danger.lt,
 .bg-danger .lt {
   background-color: #e34b5b;
