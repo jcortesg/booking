@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Booking
+    = stylesheet_link_tag    'application', media: 'all'
+    = csrf_meta_tags
+  %body
+    %section.vbox
+      = render partial: "layouts/navbar"
+      %section
+        %section.hbox.stretch
+          %aside.bg-dark.aside-md.hidden-print.hidden-xs
+          = yield

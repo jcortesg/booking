@@ -1,0 +1,9 @@
+= @soccerField
+
+- @reservations.each do |reservation|
+  = reservation.start_hour
+
+= form_for @reservation , url: soccer_field_reservations_path(@soccerField) do |f|
+  = f.label :start_hour
+  = f.text_field :start_hour
+  = f.submit

@@ -1,0 +1,55 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @venue.name
+%p
+  %b About:
+  = @venue.about
+%p
+  %b Site:
+  = @venue.site
+%p
+  %b Email:
+  = @venue.email
+%p
+  %b Phone:
+  = @venue.phone
+%p
+  %b Address:
+  = @venue.address
+%p
+  %b Address2:
+  = @venue.address2
+%p
+  %b City:
+  = @venue.city
+%p
+  %b State:
+  = @venue.state
+%p
+  %b Country:
+  = @venue.country
+%p
+  %b Geo:
+  = @venue.geo
+%p
+  %b Fb:
+  = @venue.fb
+%p
+  %b Tw:
+  = @venue.tw
+%p
+  %b Instagram:
+  = @venue.instagram
+%p
+  %b Youtube:
+  = @venue.youtube
+
+= form_for @soccerField, url: company_venue_soccer_fields_path(params[:company_id],@venue.id) do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit "Enviar"
+
+- @soccerFields.each do |field|
+  = link_to field.name, field

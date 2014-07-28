@@ -1,0 +1,49 @@
+%h1 Listing venues
+
+%table
+  %tr
+    %th Name
+    %th About
+    %th Site
+    %th Email
+    %th Phone
+    %th Address
+    %th Address2
+    %th City
+    %th State
+    %th Country
+    %th Geo
+    %th Fb
+    %th Tw
+    %th Instagram
+    %th Youtube
+    %th Company
+    %th
+    %th
+    %th
+
+  - @venues.each do |venue|
+    %tr
+      %td= venue.name
+      %td= venue.about
+      %td= venue.site
+      %td= venue.email
+      %td= venue.phone
+      %td= venue.address
+      %td= venue.address2
+      %td= venue.city
+      %td= venue.state
+      %td= venue.country
+      %td= venue.geo
+      %td= venue.fb
+      %td= venue.tw
+      %td= venue.instagram
+      %td= venue.youtube
+      %td= venue.company
+      %td= link_to 'Show', venue
+      %td= link_to 'Edit', edit_venue_path(venue)
+      %td= link_to 'Destroy', venue, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Venue', new_venue_path

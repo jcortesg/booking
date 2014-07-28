@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Tax:
+  = @company.tax
+%p
+  %b Contact name:
+  = @company.contact_name
+%p
+  %b Phone:
+  = @company.phone
+%p
+  %b Address:
+  = @company.address
+%p
+  %b Addres2:
+  = @company.addres2
+%p
+  %b City:
+  = @company.city
+%p
+  %b State:
+  = @company.state
+%p
+  %b Country:
+  = @company.country
+%p
+  %b Website:
+  = @company.website
+%p
+  %b Email:
+  = @company.email
+%p
+  %b Bank:
+  = @company.bank
+%p
+  %b Account type:
+  = @company.account_type
+%p
+  %b Account number:
+  = @company.account_number
+
+-@venues.each do |venue|
+  = link_to venue.name, company_venue_path(@company, venue)
+  %br
+
+= link_to 'Crear nueva sede', new_company_venue_path(@company)
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path
